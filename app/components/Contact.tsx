@@ -73,7 +73,7 @@ export default function Contact() {
           {/* Background Image in container */}
           <div className="relative h-[1100px] md:h-[700px] z-0 rounded-[2.5rem] overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2070&auto=format&fit=crop"
+              src="/d9ee7766-4e01-4c01-bb74-902bacd98aa7.png"
               alt="Contact background"
               fill
               className="object-cover"
