@@ -35,9 +35,21 @@ export default function Footer() {
           {/* Right Column - Contact */}
           <div>
             <p className="text-xs uppercase tracking-wider mb-4 text-[#6F6F6E] font-bold" style={{ fontFamily: 'Corbel, sans-serif' }}>SAY HELLO</p>
-            <p className="text-sm text-white/90 mb-3" style={{ fontFamily: 'Corbel, sans-serif' }}>Customercare@flavus.ae</p>
+            <a
+              href="mailto:Customercare@flavus.ae"
+              className="text-sm text-white/90 mb-3 inline-block hover:text-[#F9DC0A] transition-colors"
+              style={{ fontFamily: 'Corbel, sans-serif' }}
+            >
+              Customercare@flavus.ae
+            </a>
             <div className="w-full h-px bg-[#6F6F6E]/50 my-4"></div>
-            <p className="text-2xl font-bold text-white" style={{ fontFamily: 'Corbel, sans-serif' }}>+971 58 593 0042</p>
+            <a
+              href="tel:+971585930042"
+              className="text-2xl font-bold text-white inline-block hover:text-[#F9DC0A] transition-colors"
+              style={{ fontFamily: 'Corbel, sans-serif' }}
+            >
+              +971 58 593 0042
+            </a>
           </div>
         </div>
 
