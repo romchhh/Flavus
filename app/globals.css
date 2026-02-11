@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Corbel font family - brand font */
+@font-face {
+  font-family: 'Corbel';
+  src: local('Corbel'), local('Corbel-Regular');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corbel';
+  src: local('Corbel Light'), local('Corbel-Light');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corbel';
+  src: local('Corbel Bold'), local('Corbel-Bold');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corbel';
+  src: local('Corbel Italic'), local('Corbel-Italic');
+  font-weight: 400;
+  font-style: italic;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #222221;
+  --flavus-gold: #F9DC0A;
+  --flavus-graphite: #6F6F6E;
+  --flavus-black: #222221;
+  --flavus-white: #F6F6F6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Corbel', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F6F6F6;
+  color: var(--foreground);
+  font-family: 'Corbel', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  margin: 0;
+  padding: 0;
+}
