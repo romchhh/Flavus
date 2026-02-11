@@ -85,7 +85,7 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex h-[280px]"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex"
               >
                 {/* Image Side */}
                 <div className={`relative w-1/2 flex-shrink-0 ${imageOnLeft ? 'order-1' : 'order-2'}`}>

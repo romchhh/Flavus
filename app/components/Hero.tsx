@@ -82,14 +82,14 @@ export default function Hero() {
           {/* Background Image */}
           <div className="relative h-[700px] md:h-[800px] z-0 rounded-[2.5rem] overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop"
-              alt="Dubai business"
+              src="/dubai-museum-hero.jpg"
+              alt="Dubai museums"
               fill
               className="object-cover"
               priority
             />
-            {/* Subtle gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
+            {/* Darker gradient overlay for better readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
           </div>
 
           {/* Hero Content Overlay */}
@@ -97,7 +97,7 @@ export default function Hero() {
             <div className="w-full max-w-7xl mx-auto px-12">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Side - Text Content */}
-                <div className="text-left space-y-6 pt-16 md:pt-0">
+                <div className="text-left space-y-6 pt-24 md:pt-10">
                   <p className="text-white text-xl font-normal tracking-wide" style={{ fontFamily: 'Corbel, sans-serif' }}>
                     United Arab Emirates
                   </p>
@@ -107,7 +107,7 @@ export default function Hero() {
                     Services
                   </h1>
                   <p className="text-white text-lg font-light" style={{ fontFamily: 'Corbel, sans-serif' }}>
-                    Corporate Advisory & Document Clearing
+                    Corporate Advisory &amp; Document Clearing
                   </p>
                   <Link
                     href="#contact"
@@ -121,12 +121,12 @@ export default function Hero() {
                     className="inline-block backdrop-blur-xl bg-white/20 hover:bg-white/30 border border-white/30 text-white font-semibold px-8 py-3.5 rounded-lg transition-all mt-6 shadow-2xl hover:shadow-[0_0_30px_rgba(249,220,10,0.3)] hover:border-[#F9DC0A]/50"
                     style={{ fontFamily: 'Corbel, sans-serif' }}
                   >
-                    Get Started
+                    Submit Your Request
                   </Link>
                 </div>
 
                 {/* Right Side - Image Cards */}
-                <div className="relative flex items-center justify-end">
+                <div className="relative flex items-center justify-center md:justify-end">
                   <div className="relative w-full max-w-md">
                     {/* Card Stack */}
                     <div className="relative">
@@ -159,7 +159,7 @@ export default function Hero() {
 
                       {/* Bottom Right Card - Overlapping - Next Service */}
                       <Link href="#services" className="block">
-                        <div className="absolute top-24 -right-16 rounded-3xl overflow-hidden shadow-2xl w-[280px] h-[360px] transform rotate-3 backdrop-blur-sm bg-white/70 transition-all duration-500 z-40 cursor-pointer hover:scale-105">
+                        <div className="absolute top-24 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-16 rounded-3xl overflow-hidden shadow-2xl w-[260px] h-[340px] md:w-[280px] md:h-[360px] transform rotate-3 backdrop-blur-sm bg-white/70 transition-all duration-500 z-40 cursor-pointer hover:scale-105">
                           <Image
                             src={nextServiceData.image}
                             alt={nextServiceData.title}
@@ -182,7 +182,7 @@ export default function Hero() {
                     </div>
 
                     {/* Navigation Controls */}
-                    <div className="absolute -bottom-16 left-0 flex flex-col md:flex-row items-center gap-3 z-50">
+                    <div className="relative mt-8 md:mt-0 md:absolute md:-bottom-16 md:left-0 flex flex-col md:flex-row items-center gap-3 z-50">
                       <div className="flex items-center gap-3">
                         <button 
                           onClick={prevService}
@@ -210,7 +210,7 @@ export default function Hero() {
                     </div>
 
                     {/* Service Indicators - Yellow Bar */}
-                    <div className="absolute -bottom-32 left-0 right-0 flex gap-1 mt-4 z-50">
+                    <div className="relative mt-4 md:absolute md:-bottom-32 md:left-0 md:right-0 flex gap-1 z-50">
                       {heroServices.map((_, index) => (
                         <button
                           key={index}

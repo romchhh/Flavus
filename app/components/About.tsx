@@ -17,14 +17,14 @@ export default function About() {
               </div>
 
               {/* Description */}
-              <div className="space-y-5 mb-8 text-[#222221]">
-                <p className="text-lg font-medium leading-relaxed" style={{ fontFamily: 'Corbel, sans-serif' }}>
+              <div className="space-y-5 mb-8 text-[#222221] max-w-[640px]">
+                <p className="text-lg font-medium leading-relaxed text-justify md:text-left" style={{ fontFamily: 'Corbel, sans-serif' }}>
                   Step into a new era of business excellence in Dubai, where <span className="font-bold">Flavus Business Services</span> redefines corporate advisory with unmatched sophistication and precision.
                 </p>
-                <p className="text-lg font-medium leading-relaxed" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                <p className="text-lg font-medium leading-relaxed text-justify md:text-left" style={{ fontFamily: 'Corbel, sans-serif' }}>
                   Nestled in the heart of the UAE, we are more than consultants — we are architects of opportunity. Our seamless blend of resort-style service and urban vibrancy creates an environment where sophistication meets authenticity, and ambition transforms into achievement.
                 </p>
-                <p className="text-lg font-medium leading-relaxed" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                <p className="text-lg font-medium leading-relaxed text-justify md:text-left" style={{ fontFamily: 'Corbel, sans-serif' }}>
                   From <span className="font-bold">company formation</span> and <span className="font-bold">Golden Visa processing</span> to <span className="font-bold">residency management</span>, <span className="font-bold">document legalization</span>, and <span className="font-bold">certified translation</span> — we orchestrate every detail with precision.
                 </p>
                 

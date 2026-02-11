@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <p className="text-xs uppercase tracking-wider mb-4 text-[#6F6F6E] font-bold" style={{ fontFamily: 'Corbel, sans-serif' }}>ADDRESS</p>
             <p className="text-sm text-white/90 leading-relaxed" style={{ fontFamily: 'Corbel, sans-serif' }}>
-              UAE-based corporate advisory and document clearing firm
+              Dubai based
               <br />
               Supporting entrepreneurs and investors across the Emirates
             </p>
@@ -35,9 +35,9 @@ export default function Footer() {
           {/* Right Column - Contact */}
           <div>
             <p className="text-xs uppercase tracking-wider mb-4 text-[#6F6F6E] font-bold" style={{ fontFamily: 'Corbel, sans-serif' }}>SAY HELLO</p>
-            <p className="text-sm text-white/90 mb-3" style={{ fontFamily: 'Corbel, sans-serif' }}>info@flavusbusiness.com</p>
+            <p className="text-sm text-white/90 mb-3" style={{ fontFamily: 'Corbel, sans-serif' }}>Customercare@flavus.ae</p>
             <div className="w-full h-px bg-[#6F6F6E]/50 my-4"></div>
-            <p className="text-2xl font-bold text-white" style={{ fontFamily: 'Corbel, sans-serif' }}>+971 XXX XXX XXX</p>
+            <p className="text-2xl font-bold text-white" style={{ fontFamily: 'Corbel, sans-serif' }}>+971 58 593 0042</p>
           </div>
         </div>
 
