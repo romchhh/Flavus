@@ -76,7 +76,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative pt-24 z-40 md:z-auto">
-      <div className="max-w-[1400px] mx-auto px-8 pt-4 pb-32 md:pb-12">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8 pt-4 pb-32 md:pb-12">
         {/* Main Hero Card with rounded corners and shadow */}
         <div className="relative bg-white rounded-[2.5rem] shadow-2xl">
           {/* Background Image */}
@@ -94,10 +94,10 @@ export default function Hero() {
 
           {/* Hero Content Overlay */}
           <div className="absolute inset-0 flex items-center z-10 rounded-[2.5rem]">
-            <div className="w-full max-w-7xl mx-auto px-12">
+            <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Side - Text Content */}
-                <div className="text-left space-y-6 pt-24 md:pt-10">
+                <div className="text-left space-y-6 pt-90 md:pt-10">
                   <p className="text-white text-xl font-normal tracking-wide" style={{ fontFamily: 'Corbel, sans-serif' }}>
                     United Arab Emirates
                   </p>

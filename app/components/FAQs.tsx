@@ -46,9 +46,9 @@ export default function FAQs() {
 
   return (
     <section id="faqs" className="relative py-24 bg-gradient-to-br from-white via-[#F6F6F6] to-white">
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-[1200px] mx-auto px-0 md:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-8 md:px-0">
           <p className="text-[#6F6F6E] text-xs font-semibold mb-3 tracking-[0.2em] uppercase" style={{ fontFamily: 'Corbel, sans-serif' }}>Frequently Asked Questions</p>
           <h2 className="text-5xl md:text-6xl font-bold text-[#222221] leading-tight mb-4" style={{ fontFamily: 'Corbel, sans-serif' }}>
             Questions & Answers
@@ -56,7 +56,7 @@ export default function FAQs() {
         </div>
 
         {/* FAQ Accordion - Single Block */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-[#6F6F6E]/10">
+        <div className="bg-white rounded-none md:rounded-3xl p-8 md:p-12 shadow-xl border border-[#6F6F6E]/10">
           <div className="space-y-0">
             {faqItems.map((item, index) => (
               <div

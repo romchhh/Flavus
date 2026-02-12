@@ -67,7 +67,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-20 scroll-mt-24">
-      <div className="max-w-[1400px] mx-auto px-8 pt-4 pb-12">
+      <div className="max-w-[1400px] mx-auto px-3 md:px-8 pt-4 pb-12">
         {/* Main Contact Card with rounded corners and shadow - similar to Hero */}
         <div className="relative bg-white rounded-[2.5rem] shadow-2xl">
           {/* Background Image in container */}
@@ -85,8 +85,8 @@ export default function Contact() {
 
           {/* Contact Form Overlay */}
           <div className="absolute inset-0 flex items-start md:items-center z-10 rounded-[2.5rem]">
-            <div className="w-full max-w-[900px] mx-auto px-4 md:px-8 py-6 md:py-12">
-              <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-[30px] p-5 md:p-12 shadow-2xl">
+            <div className="w-full max-w-[900px] mx-auto px-3 md:px-8 py-6 md:py-12">
+              <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-[30px] p-5 md:p-12 shadow-2xl w-full">
           {/* Header */}
           <div className="text-center mb-8">
             <p className="text-white/80 text-xs font-semibold mb-3 tracking-[0.2em] uppercase" style={{ fontFamily: 'Corbel, sans-serif' }}>Contact</p>

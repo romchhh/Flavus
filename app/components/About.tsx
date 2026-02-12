@@ -3,11 +3,11 @@ import Image from 'next/image';
 export default function About() {
   return (
     <section id="about" className="relative py-24 bg-[#F5F5F0] z-10 md:z-auto">
-      <div className="max-w-[1400px] mx-auto px-8">
+      <div className="max-w-[1400px] mx-auto px-0 md:px-8">
         <div className="relative flex items-center min-h-[800px]">
           {/* Left Side - About Card with overlap */}
           <div className="relative z-20 w-full lg:w-[55%] lg:pr-8 flex items-center">
-            <div className="bg-[#FAF5F1] rounded-3xl p-12 shadow-2xl w-full">
+            <div className="bg-[#FAF5F1] rounded-none md:rounded-3xl p-8 md:p-12 shadow-2xl w-full">
               {/* Header */}
               <div className="mb-8">
                 <p className="text-[#6F6F6E] text-xs font-semibold mb-2 tracking-[0.2em] uppercase" style={{ fontFamily: 'Corbel, sans-serif' }}>About</p>
