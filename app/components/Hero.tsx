@@ -60,7 +60,7 @@ export default function Hero() {
             <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Side - Text Content */}
-                <div className="text-left space-y-6 pt-8 md:pt-10">
+                <div className="text-left space-y-6 pt-44 md:pt-10">
                   <p className="text-white text-xl font-normal tracking-wide" style={{ fontFamily: 'Corbel, sans-serif' }}>
                     United Arab Emirates
                   </p>
@@ -103,7 +103,8 @@ export default function Hero() {
                             className="object-cover transition-opacity duration-500"
                             key={currentIndex}
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                          <div className="absolute inset-0 bg-black/40" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                           <div className="absolute bottom-8 left-6 right-6 text-left">
                             <p className="text-white/80 text-xs mb-2 uppercase tracking-wider" style={{ fontFamily: 'Corbel, sans-serif' }}>
                               {currentService.subtitle}
@@ -129,7 +130,8 @@ export default function Hero() {
                             fill
                             className="object-cover"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                          <div className="absolute inset-0 bg-black/40" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                           <div className="absolute bottom-8 left-6 right-6 text-left">
                             <h3 className="text-2xl font-bold text-white leading-tight" style={{ fontFamily: 'Corbel, sans-serif' }}>
                               {nextServiceData.title.split(' ').map((word, i, arr) => (

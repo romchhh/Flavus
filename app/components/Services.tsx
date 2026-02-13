@@ -15,14 +15,19 @@ export default function Services() {
         {/* Services Grid - 2 columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => {
-            const imageOnLeft = service.imagePosition === 'left';
+            const imageOnLeftDesktop = service.imagePosition === 'left';
+            const imageOnLeftMobile = index % 2 === 0;
+            const imageOrderMobile = imageOnLeftMobile ? 'order-1' : 'order-2';
+            const imageOrderDesktop = imageOnLeftDesktop ? 'md:order-1' : 'md:order-2';
+            const textOrderMobile = imageOnLeftMobile ? 'order-2' : 'order-1';
+            const textOrderDesktop = imageOnLeftDesktop ? 'md:order-2' : 'md:order-1';
             return (
               <div
                 key={index}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex"
               >
-                {/* Image Side */}
-                <div className={`relative w-1/2 flex-shrink-0 ${imageOnLeft ? 'order-1' : 'order-2'}`}>
+                {/* Image Side - mobile: left/right alternating by index; desktop: from imagePosition */}
+                <div className={`relative w-1/2 flex-shrink-0 ${imageOrderMobile} ${imageOrderDesktop}`}>
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -32,7 +37,7 @@ export default function Services() {
                 </div>
 
                 {/* Information Side */}
-                <div className={`w-1/2 flex flex-col justify-center p-6 bg-[#77736D] ${imageOnLeft ? 'order-2' : 'order-1'}`}>
+                <div className={`w-1/2 flex flex-col justify-center p-6 bg-[#77736D] ${textOrderMobile} ${textOrderDesktop}`}>
                   {/* Icon */}
                   {service.Icon && (
                     <div className="text-white mb-4 text-center flex justify-center">

@@ -24,8 +24,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Navigation Bar - Fixed */}
-      <header className="backdrop-blur-xl bg-white/80 border border-white/30 rounded-[2rem] fixed top-4 left-1/2 transform -translate-x-1/2 z-50 shadow-2xl" style={{ width: '80%' }}>
-        <div className="px-6 py-6 flex items-center justify-between relative">
+      <header className="backdrop-blur-xl bg-[#F9DC0A] border border-[#F9DC0A]/90 rounded-[2rem] fixed top-6 md:top-4 left-1/2 transform -translate-x-1/2 z-50 shadow-2xl w-[94%] md:w-[80%]">
+        <div className="px-4 md:px-6 py-4 md:py-6 flex items-center justify-between relative">
           <Link href="#home" className="flex items-center" onClick={closeMenu}>
             <Image
               src="/6.png"

@@ -56,12 +56,12 @@ export default function About() {
 
           {/* Right Side - Professional Image with overlap */}
           <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] -z-10 lg:z-0">
-            <div className="relative h-full min-h-[800px] rounded-3xl overflow-hidden">
+            <div className="relative h-full min-h-[800px] rounded-3xl overflow-hidden bg-[#F5F5F0]">
               <Image
                 src="/about-section.png"
                 alt="Flavus Business Services"
                 fill
-                className="object-cover object-center"
+                className="object-contain object-center"
                 priority
               />
             </div>
