@@ -209,7 +209,7 @@ export default function Contact() {
                   Preferred Method of Contact *
                 </label>
                 <div className="flex flex-wrap gap-6">
-                  {['Phone', 'Email'].map((method) => (
+                  {['Phone', 'Email', 'Messenger'].map((method) => (
                     <label
                       key={method}
                       className="flex items-center cursor-pointer"
