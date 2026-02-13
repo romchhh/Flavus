@@ -67,7 +67,7 @@ export default function FAQs() {
                   onClick={() => toggleAccordion(index)}
                   className="w-full flex items-center justify-between py-6 text-left hover:bg-[#F6F6F6]/50 transition-colors rounded-lg px-2 -mx-2"
                 >
-                  <span className="text-[#222221] font-bold text-lg pr-4 flex-1" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                  <span className="text-[#222221] font-bold text-lg pr-4 flex-1 leading-snug" style={{ fontFamily: 'Corbel, sans-serif' }}>
                     {item.question}
                   </span>
                   <span className={`text-[#6F6F6E] text-base flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
@@ -79,7 +79,7 @@ export default function FAQs() {
                     openIndex === index ? 'max-h-96 pb-5' : 'max-h-0'
                   }`}
                 >
-                  <div className="px-2 text-[#222221] text-base font-medium leading-relaxed" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                  <div className="px-2 text-[#222221] text-base font-medium leading-relaxed text-justify md:text-left" style={{ fontFamily: 'Corbel, sans-serif' }}>
                     {item.answer}
                   </div>
                 </div>

@@ -10,6 +10,7 @@ export default function Contact() {
     email: '',
     service: 'company-formation',
     preferredContact: 'Phone',
+    taskDescription: '',
   });
   const [privacyAgreed, setPrivacyAgreed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,6 +39,7 @@ export default function Contact() {
           email: formData.email || undefined,
           service: formData.service,
           preferredContact: formData.preferredContact,
+          taskDescription: formData.taskDescription || undefined,
         }),
       });
 
@@ -52,6 +54,7 @@ export default function Contact() {
           email: '',
           service: 'company-formation',
           preferredContact: 'Phone',
+          taskDescription: '',
         });
         setPrivacyAgreed(false);
       } else {
@@ -181,6 +184,21 @@ export default function Contact() {
                   <option value="ongoing" className="text-[#222221]">Ongoing Corporate & Administrative Support</option>
                 </select>
               </div>
+            </div>
+
+            {/* Task Description */}
+            <div>
+              <label className="block text-white text-xs font-semibold mb-2 uppercase tracking-wider drop-shadow-md" style={{ fontFamily: 'Corbel, sans-serif' }}>
+                DESCRIBE YOUR TASK/REQUEST
+              </label>
+              <textarea
+                value={formData.taskDescription}
+                onChange={(e) => setFormData({ ...formData, taskDescription: e.target.value })}
+                className="w-full px-4 py-3.5 backdrop-blur-md bg-white/30 border border-white/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/60 text-white placeholder:text-white/70 transition-all resize-none"
+                placeholder="Describe your task/request"
+                rows={4}
+                style={{ fontFamily: 'Corbel, sans-serif' }}
+              />
             </div>
 
             {/* Set Us a Task Section */}

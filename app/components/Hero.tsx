@@ -3,44 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
-const heroServices = [
-  {
-    title: 'Company Formation',
-    subtitle: 'UAE Business',
-    description: 'New company formation in Mainland, Free Zones, and Offshore jurisdictions',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
-    icon: '🏢',
-  },
-  {
-    title: 'Document Clearing',
-    subtitle: 'Document Services',
-    description: 'Government document clearance and processing, immigration and visa-related documentation support',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop',
-    icon: '📄',
-  },
-  {
-    title: 'Translation & Legalization',
-    subtitle: 'Document Services',
-    description: 'Certified legal and official document translation, document legalization and attestation',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop',
-    icon: '🌐',
-  },
-  {
-    title: 'Visa & Immigration',
-    subtitle: 'Immigration Services',
-    description: 'Golden Visa issuance and full support, investor, partner, employment, and family visa issuance',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop',
-    icon: '🛂',
-  },
-  {
-    title: 'Labor & Employment',
-    subtitle: 'Employment Services',
-    description: 'Labor file opening and management, employment contracts preparation and registration',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop',
-    icon: '👥',
-  },
-];
+import { heroServices } from '../data/services';
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -97,7 +60,7 @@ export default function Hero() {
             <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Side - Text Content */}
-                <div className="text-left space-y-6 pt-90 md:pt-10">
+                <div className="text-left space-y-6 pt-8 md:pt-10">
                   <p className="text-white text-xl font-normal tracking-wide" style={{ fontFamily: 'Corbel, sans-serif' }}>
                     United Arab Emirates
                   </p>
@@ -207,22 +170,6 @@ export default function Hero() {
                           / {String(heroServices.length).padStart(2, '0')}
                         </span>
                       </div>
-                    </div>
-
-                    {/* Service Indicators - Yellow Bar */}
-                    <div className="relative mt-4 md:absolute md:-bottom-32 md:left-0 md:right-0 flex gap-1 z-50">
-                      {heroServices.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => goToService(index)}
-                          className={`h-1 transition-all duration-300 ${
-                            index === currentIndex 
-                              ? 'flex-1 bg-[#F9DC0A]' 
-                              : 'flex-1 bg-white/30 hover:bg-white/50'
-                          }`}
-                          aria-label={`Go to service ${index + 1}`}
-                        />
-                      ))}
                     </div>
                   </div>
                 </div>

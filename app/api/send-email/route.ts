@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
     }
 
     const body = JSON.parse(bodyText);
-    const { fullName, phone, email, service, preferredContact } = body;
+    const { fullName, phone, email, service, preferredContact, taskDescription } = body;
 
     // Валідація обов'язкових полів
     if (!fullName || typeof fullName !== 'string' || fullName.trim().length === 0) {
@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Перевірка на небезпечні паттерни
-    const contentToCheck = `${fullName} ${phone} ${email || ''} ${service || ''} ${preferredContact}`;
+    const contentToCheck = `${fullName} ${phone} ${email || ''} ${service || ''} ${preferredContact} ${taskDescription || ''}`;
     if (containsDangerousPatterns(contentToCheck)) {
       return NextResponse.json(
         { error: "Dangerous patterns detected in form data" },
@@ -98,6 +98,7 @@ export async function POST(req: NextRequest) {
         ${email ? `<p><strong>Email:</strong> ${email}</p>` : ''}
         <p><strong>Service:</strong> ${serviceName}</p>
         <p><strong>Preferred Method of Contact:</strong> ${preferredContact}</p>
+        ${taskDescription ? `<p><strong>Task/Request Description:</strong><br>${taskDescription.replace(/\n/g, '<br>')}</p>` : ''}
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
         <p style="color: #666; font-size: 12px;">This email was sent from the Flavus Business Services contact form.</p>
       </div>
@@ -111,6 +112,7 @@ Phone: ${phone}
 ${email ? `Email: ${email}` : ''}
 Service: ${serviceName}
 Preferred Method of Contact: ${preferredContact}
+${taskDescription ? `\nTask/Request Description:\n${taskDescription}` : ''}
     `.trim();
 
     // Відправка email через EmailJS API
